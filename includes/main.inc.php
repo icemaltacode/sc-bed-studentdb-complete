@@ -84,6 +84,7 @@ function sortStudents()
     if (filter_input(INPUT_GET, 'sortBy', FILTER_DEFAULT, FILTER_NULL_ON_FAILURE)) {
         // New sort
         $sortBy = filter_input(INPUT_GET, 'sortBy', FILTER_DEFAULT);
+        saveValue('sortBy', $sortBy);
     } else {
         // Previous sort
         $sortBy = loadValue('sortBy');
